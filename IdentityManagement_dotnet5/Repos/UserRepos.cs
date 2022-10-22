@@ -14,14 +14,24 @@ namespace IdentityManagement_dotnet5.Repos
             _dataContext = dataContext;
         }
 
-        public async Task<IEnumerable<User>> GetAll()
+        public Task<IEnumerable<User>> GetAll()
         {
-            return await _dataContext.Users.ToListAsync();
+            throw new System.NotImplementedException();
         }
 
-        public async Task<User> GetById(int id)
+        public Task<User> GetById(int id)
         {
-            return await _dataContext.Users.FirstOrDefaultAsync(x => x.Id == id);
+            throw new System.NotImplementedException();
         }
+
+        //public async Task<IEnumerable<User>> GetAll()
+        //{
+        //    return await _dataContext.Users.ToListAsync();
+        //}
+
+        //public async Task<User> GetById(int id)
+        //{
+        //    return await _dataContext.Users.FirstOrDefaultAsync(x => x.Id == id);
+        //}
     }
 }
